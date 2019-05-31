@@ -1,7 +1,9 @@
 from django.shortcuts import render
 import operator
+from django.contrib.auth.decorators import login_required
 
 
+@login_required(login_url='/accounts/signup')
 def home(request):
     return render(request, 'counter/home.html')
 
