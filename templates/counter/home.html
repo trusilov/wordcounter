@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+
+{% block content %}
+<h1>Word count</h1>
+
+<form action="{% url 'counter' %}">
+    <div class="form-group">
+        <label for="fulltext">Enter your text </label>
+        <textarea class="form-control" name="fulltext" rows="10" cols="40" id="fulltext" placeholder="Your text"></textarea>
+        <br>
+        <button type="submit" class="btn btn-primary" value="count">Count</button>
+    </div>
+</form>
+
+
+
+
+{% endblock content %}
+
+
+</body>
+</html>
